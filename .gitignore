@@ -1,1 +1,30 @@
-"# Python"                "__pycache__/"           "*.pyc"                  "*.pyo"                  "*.pyd"                  ""                       "# Data & models"        "data/raw/*"             "data/processed/*"       "models/*"               "*.csv"                  "*.zip"                  "*.pt"                   "*.json"                
+# Python / Jupyter
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+fraud_env*/
+
+# Large data & models (never commit these!)
+data/raw/*
+data/processed/*
+models/*
+api/models/*
+
+# Logs & temp
+*.log
+.DS_Store
+Thumbs.db
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
