@@ -28,3 +28,38 @@ SHAP analysis on the best XGBoost model shows the most important features for fr
 - Amount, V4, V11 (positive contribution in many cases)
 
 ![SHAP Summary](reports/figures/shap_summary_fraud.png)
+
+See `reports/figures/final_pr_comparison.png` for visual comparison and `notebooks/05-final-comparison-and-interpretability.ipynb` for SHAP plots.
+
+### FastAPI Deployment
+
+A lightweight REST API serving fraud predictions using the tuned XGBoost model with class weights.
+
+#### Requirements
+Install in your virtual environment:
+
+```bash
+pip install fastapi uvicorn slowapi pydantic joblib numpy xgboost 
+```
+
+
+
+## API Demo (Swagger UI)
+
+<image-card alt="Swagger UI - Interactive Docs" src="reports/screenshots/swagger-ui.png" ></image-card>
+*Interactive Swagger UI at /docs*
+
+## Successful Prediction Example
+
+<image-card alt="Prediction Response" src="reports/screenshots/successful-prediction.png" ></image-card>
+*Example normal transaction response*
+
+## PR-AUC Comparison
+
+<image-card alt="Final PR Curves" src="reports/screenshots/pr-curves-comparison.png" ></image-card>
+*Precision-Recall curves for all models*
+
+## SHAP Interpretability
+
+<image-card alt="SHAP Summary Plot" src="reports/screenshots/shap-summary.png" ></image-card>
+*Feature importance and impact on fraud probability*
